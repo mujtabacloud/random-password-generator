@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>Random Password Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <section class="generator">
+      <div class="icon" aria-hidden="true">🔐</div>
+
+      <h1>Password Generator</h1>
+      <p class="subtitle">
+        Create a strong, secure password in seconds.
+      </p>
+
+      <div class="password-box">
+        <input
+          type="text"
+          id="password"
+          placeholder="Your password will appear here"
+          aria-label="Generated password"
+          readonly
+          spellcheck="false"
+          autocomplete="off"
+        >
+        <button
+          type="button"
+          id="copy-btn"
+          class="copy-btn"
+          aria-label="Copy password"
+        >
+          Copy
+        </button>
+      </div>
+
+      <p id="message" class="message" role="status" aria-live="polite"></p>
+
+      <div class="length-section">
+        <div class="section-heading">
+          <label for="length">Password Length</label>
+          <span id="length-value">16</span>
+        </div>
+        <input
+          type="range"
+          id="length"
+          min="8"
+          max="32"
+          value="16"
+        >
+        <div class="range-labels">
+          <span>8 characters</span>
+          <span>32 characters</span>
+        </div>
+      </div>
+
+      <fieldset class="options">
+        <legend>Include Characters</legend>
+
+        <label class="option">
+          <input type="checkbox" id="uppercase" checked>
+          <span class="custom-check"></span>
+          <span>Uppercase letters <small>A–Z</small></span>
+        </label>
+
+        <label class="option">
+          <input type="checkbox" id="lowercase" checked>
+          <span class="custom-check"></span>
+          <span>Lowercase letters <small>a–z</small></span>
+        </label>
+
+        <label class="option">
+          <input type="checkbox" id="numbers" checked>
+          <span class="custom-check"></span>
+          <span>Numbers <small>0–9</small></span>
+        </label>
+
+        <label class="option">
+          <input type="checkbox" id="symbols" checked>
+          <span class="custom-check"></span>
+          <span>Special characters <small>!@#$...</small></span>
+        </label>
+      </fieldset>
+
+      <button type="button" id="generate-btn" class="generate-btn">
+        Generate Password
+      </button>
+
+      <p class="footer-text">
+        Your password is generated locally in your browser.
+      </p>
+    </section>
+  </main>
+</body>
+</html>
