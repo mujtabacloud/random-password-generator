@@ -41,7 +41,7 @@ You only need a modern web browser, such as Chrome, Firefox, Edge, or Safari.
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/YOUR_USERNAME/random-password-generator.git
+   git clone https://github.com/mujtabacloud/random-password-generator.git
    ```
 
 2. Navigate to the project directory:
